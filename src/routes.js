@@ -6,6 +6,7 @@ export default [
   {
     path: '/',
     component: AlbumsIndex,
+    name: 'home'
   },
   {
     path: '/new',

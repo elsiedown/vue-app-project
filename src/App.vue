@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <navbar />
-    <h1>Elsie's Tunes</h1>
-    <router-view :albums="albums"></router-view>
+    <router-view :albums="albums" @add:album="addAlbum"></router-view>
   </div>
 </template>
 
@@ -39,10 +38,29 @@ export default {
           album: "Dont Smile at Me",
           image:
             "https://i.pinimg.com/originals/78/6e/a3/786ea3d49748ab17966e4301f0f73bb6.jpg"
+        },
+        {
+          id: 4,
+          artist: "Ben Howard",
+          album: "Keep Your Head Up",
+          image:
+            "https://upload.wikimedia.org/wikipedia/en/f/f2/KeepYourHeadUp.jpg"
         }
       ]
     };
+  },
+  methods: {
+  addAlbum(album) {
+    const lastId =
+    this.albums.length > 0
+      ? this.albums[this.albums.length - 1].id
+      : 0;
+  const id = lastId + 1;
+  const newAlbum = { ...album, id };
+
+  this.albums = [...this.albums, newAlbum];
   }
+}
 };
 </script>
 
@@ -71,6 +89,6 @@ h1 {
   color: white;
   font-family: "Karantina", cursive;
   font-size: 120px;
-  margin-top: 5px;
+  margin-top: 0;
 }
 </style>

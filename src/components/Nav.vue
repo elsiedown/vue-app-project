@@ -1,24 +1,29 @@
 <template>
   <div id="nav">
-    <router-link to="/"><img src="../assets/disco.png" class="disco" alt="disco=logo"/></router-link>
-    <router-link to="/new">Add</router-link>
+    <router-link to="/"
+      ><img src="../assets/disco.png" class="disco" alt="disco=logo"
+    /></router-link>
+    <h1>Elsie's Tunes</h1>
+    <router-link to="/new"
+      ><img src="../assets/plus-sign.png" class="add" alt="add-sign"
+    /></router-link>
   </div>
 </template>
 <script>
-
 export default {
-  name: 'nav',
+  name: "nav"
 };
 </script>
 
 
 
 <style scoped>
-
 #nav {
- top: 0;
- display: flex;
- margin: 0;
+  top: 0;
+  display: flex;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .disco {
@@ -27,5 +32,9 @@ export default {
   margin-left: 20px;
 }
 
-
+.add {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
 </style>
