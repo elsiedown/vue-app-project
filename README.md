@@ -1,7 +1,6 @@
 # Vue App Project
-```
-My first app built using Vue. A collection of my favourite music with the ability to add more to the collection.
-```
+
+My first application built using Vue. A collection of my favourite music with the ability to add other albums to the mix.
 
 ## Challenges
 
