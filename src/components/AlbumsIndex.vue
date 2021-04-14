@@ -1,8 +1,8 @@
 <template>
   <div id="albums-index">
     <div v-for="album in albums" :key="album.id">
-      <p>{{album.artist}}</p>
-      <p>{{album.album}}</p>
+      <!-- <p>{{album.artist}}</p>
+      <p>{{album.album}}</p> -->
       <img :src="album.image">
     </div>
   </div>
@@ -33,8 +33,8 @@ div {
 }
 
 img {
-  height: 200px;
-  width: 200px;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
 }
 

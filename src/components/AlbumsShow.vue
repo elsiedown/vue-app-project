@@ -1,5 +1,6 @@
 <template>
   <div id="albums-show">
+    <h1>Album show</h1>
     <div v-for="album in albums" :key="album.id">
       <p>{{album.artist}}</p>
       <p>{{album.album}}</p>
