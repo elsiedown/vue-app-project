@@ -3,29 +3,28 @@
     <div v-for="album in albums" :key="album.id">
       <!-- <p>{{album.artist}}</p>
       <p>{{album.album}}</p> -->
-      <img :src="album.image">
+      <img :src="album.image" />
     </div>
     <div class="add-div">
-          <router-link to="/new"
-      ><img src="../assets/plus-sign.png" class="add" alt="add-sign"
-    /></router-link>
-    </div>  
+      <router-link to="/new"
+        ><img src="../assets/plus-sign.png" class="add" alt="add-sign"
+      /></router-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'albums-index',
+  name: "albums-index",
   props: {
-    albums: Array,
-  },
+    albums: Array
+  }
 };
 </script>
 
 
 
 <style scoped>
-
 #albums-index {
   display: flex;
   align-items: center;
@@ -53,8 +52,7 @@ img {
   align-items: center;
 }
 .add {
-    height: 80px;
-    width: 80px;
+  height: 80px;
+  width: 80px;
 }
-
 </style>

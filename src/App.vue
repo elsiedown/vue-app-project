@@ -46,14 +46,13 @@ export default {
           image:
             "https://upload.wikimedia.org/wikipedia/en/f/f2/KeepYourHeadUp.jpg"
         },
-          {
+        {
           id: 5,
           artist: "ABRA",
           album: "Rose",
-          image:
-            "https://f4.bcbits.com/img/a0869976939_10.jpg"
+          image: "https://f4.bcbits.com/img/a0869976939_10.jpg"
         },
-          {
+        {
           id: 6,
           artist: "Arlo Parks",
           album: "Sophie",
@@ -67,7 +66,7 @@ export default {
           image:
             "https://media.pitchfork.com/photos/5fb54c3c2c244fead4faa8d4/1:1/w_320/Home%20for%20Now_Babeheaven.jpg"
         },
-             {
+        {
           id: 8,
           artist: "Chance the Rapper",
           album: "Coloring Book",
@@ -80,25 +79,20 @@ export default {
           album: "Unholy",
           image:
             "https://diy-magazine.s3.amazonaws.com/d/diy/Artists/C/Collard/unholy_album-cover.jpg"
-        },
-
-
-
+        }
       ]
     };
   },
   methods: {
-  addAlbum(album) {
-    const lastId =
-    this.albums.length > 0
-      ? this.albums[this.albums.length - 1].id
-      : 0;
-  const id = lastId + 1;
-  const newAlbum = { ...album, id };
+    addAlbum(album) {
+      const lastId =
+        this.albums.length > 0 ? this.albums[this.albums.length - 1].id : 0;
+      const id = lastId + 1;
+      const newAlbum = { ...album, id };
 
-  this.albums = [...this.albums, newAlbum];
+      this.albums = [...this.albums, newAlbum];
+    }
   }
-}
 };
 </script>
 

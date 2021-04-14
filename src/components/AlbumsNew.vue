@@ -114,7 +114,6 @@ form {
   color: red;
 }
 
-
 label {
   color: white;
 }

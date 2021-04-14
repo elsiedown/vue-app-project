@@ -2,7 +2,7 @@ import AlbumsIndex from './components/AlbumsIndex.vue'
 import AlbumsNew from './components/AlbumsNew.vue'
 import AlbumsShow from './components/AlbumsShow.vue'
 
-export default [ 
+export default [
   {
     path: '/',
     component: AlbumsIndex,
