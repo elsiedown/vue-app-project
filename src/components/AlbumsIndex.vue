@@ -32,6 +32,7 @@ export default {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 60px;
 }
 
 div {

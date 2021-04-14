@@ -45,7 +45,45 @@ export default {
           album: "Keep Your Head Up",
           image:
             "https://upload.wikimedia.org/wikipedia/en/f/f2/KeepYourHeadUp.jpg"
-        }
+        },
+          {
+          id: 5,
+          artist: "ABRA",
+          album: "Rose",
+          image:
+            "https://f4.bcbits.com/img/a0869976939_10.jpg"
+        },
+          {
+          id: 6,
+          artist: "Arlo Parks",
+          album: "Sophie",
+          image:
+            "https://www.turntablekitchen.com/_uploads/ArloParks_TurnTableArtworkFont_CYMK.jpg"
+        },
+        {
+          id: 7,
+          artist: "Babeheaven",
+          album: "Home For Now",
+          image:
+            "https://media.pitchfork.com/photos/5fb54c3c2c244fead4faa8d4/1:1/w_320/Home%20for%20Now_Babeheaven.jpg"
+        },
+             {
+          id: 8,
+          artist: "Chance the Rapper",
+          album: "Coloring Book",
+          image:
+            "https://media.pitchfork.com/photos/5929b5bb13d197565213ace9/1:1/w_600/c5e30897.jpg"
+        },
+        {
+          id: 9,
+          artist: "Collard",
+          album: "Unholy",
+          image:
+            "https://diy-magazine.s3.amazonaws.com/d/diy/Artists/C/Collard/unholy_album-cover.jpg"
+        },
+
+
+
       ]
     };
   },

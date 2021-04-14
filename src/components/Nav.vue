@@ -37,4 +37,8 @@ export default {
   width: 40px;
   margin-right: 20px;
 }
+
+h1 {
+  margin-top: 0;
+}
 </style>

@@ -2,11 +2,12 @@
 
 <template>
   <div id="albums-new">
-    <h1>Add a New Album</h1>
+    <h1>Add to the Collection</h1>
     <form @submit.prevent="handleSubmit">
       <label>Artist</label>
       <input
         type="text"
+        placeholder="eg. Coldplay"
         :class="{ 'has-error': submitting && invalidArtist }"
         v-model="album.artist"
         @focus="clearStatus"
@@ -15,6 +16,7 @@
       <label>Album</label>
       <input
         type="text"
+        placeholder="eg. Parachutes"
         v-model="album.album"
         :class="{ 'has-error': submitting && invalidAlbum }"
         @focus="clearStatus"
@@ -22,6 +24,7 @@
       <label>Album Cover</label>
       <input
         type="text"
+        placeholder="eg. URL Link"
         v-model="album.image"
         :class="{ 'has-error': submitting && invalidImage }"
         @focus="clearStatus"
@@ -104,16 +107,26 @@ h1 {
 form {
   margin-bottom: 2rem;
   color: black;
-  width: 200px;
+  width: 300px;
 }
 
 .error-message {
   color: red;
 }
 
+
+label {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
 button {
   background-color: white;
-  color: black;
+  color: grey;
   border: none;
+  margin-top: 30px;
 }
 </style>
