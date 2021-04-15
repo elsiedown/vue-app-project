@@ -142,7 +142,7 @@ label {
 
 button {
   background-color: white;
-  color: grey;
+  color: pink;
   border: none;
   margin-top: 30px;
 }

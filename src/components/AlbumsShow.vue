@@ -1,18 +1,16 @@
 <template>
   <div id="albums-show">
     <div class="top-section">
-      <div>
-        <img :src="albums[id].image" />
-      </div>
-      <div class="text-info">
-        <h1>{{ albums[id].album }}</h1>
-        <p>{{ albums[id].artist }}</p>
-        <p>{{ albums[id].year }}</p>
-      </div>
+    <div>
+      <img :src="albums[index].image" />
     </div>
-    <button @click="$emit('delete:album', albums[id].id)">
-      Remove from the Collection
-    </button>
+    <div class="text-info">
+      <h1>{{ albums[index].album }}</h1>
+      <p>{{ albums[index].artist }}</p>
+      <p>{{ albums[index].year }}</p>
+    </div>
+    </div>
+    <button @click="$emit('delete:album', albums[index].id )">Remove from the Collection</button>
   </div>
 </template>
 
@@ -23,10 +21,13 @@ export default {
     albums: Array
   },
   computed: {
-    id() {
+    id: function () {
       return this.$route.params.id;
+    },
+    index: function () {
+      return this.albums.findIndex(album => album.id == this.id);
+      }
     }
-  }
 };
 </script>
 
@@ -56,8 +57,8 @@ img {
 }
 
 p {
-  margin: 0;
-  font-size: 25px;
+ margin: 0;
+ font-size: 25px;
 }
 
 h1 {
@@ -72,4 +73,5 @@ button {
   color: pink;
   border: none;
 }
+
 </style>
