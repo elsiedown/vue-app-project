@@ -3,7 +3,7 @@
     <router-link to="/"
       ><img src="../assets/disco.png" class="disco" alt="disco=logo"
     /></router-link>
-    <h1>Elsie's Tunes</h1>
+    <h1>Elsie's Albums</h1>
     <router-link to="/new"
       ><img src="../assets/plus-sign.png" class="add" alt="add-sign"
     /></router-link>

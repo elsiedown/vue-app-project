@@ -1,8 +1,6 @@
 <template>
   <div id="albums-index">
     <div v-for="album in albums" :key="album.id">
-      <!-- <p>{{album.artist}}</p>
-      <p>{{album.album}}</p> -->
       <router-link :to="'/albums/' + album.id"
         ><img :src="album.image"
       /></router-link>

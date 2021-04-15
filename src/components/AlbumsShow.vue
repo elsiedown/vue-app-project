@@ -1,16 +1,18 @@
 <template>
   <div id="albums-show">
     <div class="top-section">
-    <div>
-      <img :src="albums[index].image" />
+      <div>
+        <img :src="albums[index].image" />
+      </div>
+      <div class="text-info">
+        <h1>{{ albums[index].album }}</h1>
+        <p>{{ albums[index].artist }}</p>
+        <p>{{ albums[index].year }}</p>
+      </div>
     </div>
-    <div class="text-info">
-      <h1>{{ albums[index].album }}</h1>
-      <p>{{ albums[index].artist }}</p>
-      <p>{{ albums[index].year }}</p>
-    </div>
-    </div>
-    <button @click="$emit('delete:album', albums[index].id )">Remove from the Collection</button>
+    <button @click="$emit('delete:album', albums[index].id)">
+      Remove from the Collection
+    </button>
   </div>
 </template>
 
@@ -21,13 +23,13 @@ export default {
     albums: Array
   },
   computed: {
-    id: function () {
+    id: function() {
       return this.$route.params.id;
     },
-    index: function () {
+    index: function() {
       return this.albums.findIndex(album => album.id == this.id);
-      }
     }
+  }
 };
 </script>
 
@@ -36,11 +38,7 @@ export default {
 <style scoped>
 #albums-show {
   color: white;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
   margin-top: 40px;
-  /* flex-direction: column; */
 }
 
 .top-section {
@@ -57,8 +55,8 @@ img {
 }
 
 p {
- margin: 0;
- font-size: 25px;
+  margin: 0;
+  font-size: 25px;
 }
 
 h1 {
@@ -73,5 +71,4 @@ button {
   color: pink;
   border: none;
 }
-
 </style>
