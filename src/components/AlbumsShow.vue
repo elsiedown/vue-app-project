@@ -1,16 +1,18 @@
 <template>
   <div id="albums-show">
     <div class="top-section">
-    <div>
-      <img :src="albums[id].image" />
+      <div>
+        <img :src="albums[id].image" />
+      </div>
+      <div class="text-info">
+        <h1>{{ albums[id].album }}</h1>
+        <p>{{ albums[id].artist }}</p>
+        <p>{{ albums[id].year }}</p>
+      </div>
     </div>
-    <div class="text-info">
-      <h1>{{ albums[id].album }}</h1>
-      <p>{{ albums[id].artist }}</p>
-      <p>{{ albums[id].year }}</p>
-    </div>
-    </div>
-    <button @click="$emit('delete:album', albums[id].id )">Remove from the Collection</button>
+    <button @click="$emit('delete:album', albums[id].id)">
+      Remove from the Collection
+    </button>
   </div>
 </template>
 
@@ -54,8 +56,8 @@ img {
 }
 
 p {
- margin: 0;
- font-size: 25px;
+  margin: 0;
+  font-size: 25px;
 }
 
 h1 {
@@ -70,5 +72,4 @@ button {
   color: pink;
   border: none;
 }
-
 </style>

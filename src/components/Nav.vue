@@ -1,5 +1,5 @@
 <template>
-  <div id="nav">
+  <div id="navbar">
     <router-link to="/"
       ><img src="../assets/disco.png" class="disco" alt="disco=logo"
     /></router-link>
@@ -11,14 +11,14 @@
 </template>
 <script>
 export default {
-  name: "nav"
+  name: "navbar"
 };
 </script>
 
 
 
 <style scoped>
-#nav {
+#navbar {
   top: 0;
   display: flex;
   margin: 0;

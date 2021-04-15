@@ -4,7 +4,8 @@
       <!-- <p>{{album.artist}}</p>
       <p>{{album.album}}</p> -->
       <router-link :to="'/albums/' + album.id"
-        ><img :src="album.image" /></router-link>
+        ><img :src="album.image"
+      /></router-link>
     </div>
     <div class="add-div">
       <router-link to="/new"

@@ -57,7 +57,7 @@ export default {
         album: "",
         artist: "",
         image: "",
-        year: "",
+        year: ""
       }
     };
   },
@@ -66,7 +66,12 @@ export default {
       this.submitting = true;
       this.clearStatus();
 
-      if (this.invalidArtist || this.invalidAlbum || this.invalidImage || this.invlaidYear ) {
+      if (
+        this.invalidArtist ||
+        this.invalidAlbum ||
+        this.invalidImage ||
+        this.invlaidYear
+      ) {
         this.error = true;
         return;
       }
@@ -75,7 +80,7 @@ export default {
         artist: "",
         album: "",
         image: "",
-        year: "",
+        year: ""
       };
       this.error = false;
       this.success = true;
