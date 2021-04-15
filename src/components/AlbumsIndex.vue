@@ -3,7 +3,8 @@
     <div v-for="album in albums" :key="album.id">
       <!-- <p>{{album.artist}}</p>
       <p>{{album.album}}</p> -->
-      <img :src="album.image" />
+      <router-link :to="'/albums/' + album.id"
+        ><img :src="album.image" /></router-link>
     </div>
     <div class="add-div">
       <router-link to="/new"

@@ -15,5 +15,6 @@ export default [
   {
     path: '/albums/:id',
     component: AlbumsShow,
+    name: 'albums'
   },
 ]

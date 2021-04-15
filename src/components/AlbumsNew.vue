@@ -29,6 +29,14 @@
         :class="{ 'has-error': submitting && invalidImage }"
         @focus="clearStatus"
       />
+      <label>Release Date</label>
+      <input
+        type="text"
+        placeholder="eg. 2000"
+        v-model="album.year"
+        :class="{ 'has-error': submitting && invalidYear }"
+        @focus="clearStatus"
+      />
       <p v-if="error && submitting" class="error-message">
         Please fill in all the fields!
       </p>
@@ -48,7 +56,8 @@ export default {
       album: {
         album: "",
         artist: "",
-        image: ""
+        image: "",
+        year: "",
       }
     };
   },
@@ -57,7 +66,7 @@ export default {
       this.submitting = true;
       this.clearStatus();
 
-      if (this.invalidArtist || this.invalidAlbum || this.invalidImage) {
+      if (this.invalidArtist || this.invalidAlbum || this.invalidImage || this.invlaidYear ) {
         this.error = true;
         return;
       }
@@ -65,7 +74,8 @@ export default {
       this.employee = {
         artist: "",
         album: "",
-        image: ""
+        image: "",
+        year: "",
       };
       this.error = false;
       this.success = true;
@@ -87,6 +97,9 @@ export default {
     },
     invalidImage() {
       return this.album.image === "";
+    },
+    invalidYear() {
+      return this.album.year === "";
     }
   }
 };
