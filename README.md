@@ -24,8 +24,8 @@ My first app built using Vue and JavaScript. A collection of my favourite albums
 * Loops in Vue(V-for)
 * v-bind and v-on
 * v-if / v-else / v-else/-if
-* methods
-* computed option
+* Methods
+* How to use computed options and how to pass data between them using 'this'
 * data()
-* Vue Router
+* Vue Router (& this.$route.params.id)
 * Primitive UI
